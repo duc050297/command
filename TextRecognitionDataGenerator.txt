@@ -1,0 +1,12 @@
+trdg -w 1 -c 1000 -k 10 -b 2 -rk -i ../test.txt -fd ../font -d 3 --output_dir test -t 6
+
+-w: số từ
+-c: số lượng ảnh
+-k: độ nghiêng
+-b: background
+-rk: random độ nghiêng
+-i: file text input
+-fd: file chứa font
+-d: biến dạng
+-t: số luồng
+--output_dir: folder output
