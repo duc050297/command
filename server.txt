@@ -2,10 +2,13 @@ ps -ef|grep ducnt
 kill all: ps aux | grep ducnt | awk '{print $2}' | xargs kill -9 
 
 Chạy ngầm và ghi log vào nohup.out
-nohup python app.py > nohup.out &
+nohup python app.py > data/log.txt &
 
 Xem log
 tail -fn -500 log.txt
+
+check process nào đăng ghi vào file
+lsof data/log.txt
 
 curl http://172.18.5.18:5297/query?url=https://patrolbase.imgix.net/products/8785/specna-arms-sa-b01-m4a1-carbine-assault-rifle-black-two-tone-red.jpg
 mount gateway voi server:
