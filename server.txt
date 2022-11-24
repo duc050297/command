@@ -1,0 +1,50 @@
+ps -ef|grep ducnt
+kill all: ps aux | grep ducnt | awk '{print $2}' | xargs kill -9 
+
+Chạy ngầm và ghi log vào nohup.out
+nohup python app.py > nohup.out &
+
+curl http://172.18.5.18:5297/query?url=https://patrolbase.imgix.net/products/8785/specna-arms-sa-b01-m4a1-carbine-assault-rifle-black-two-tone-red.jpg
+mount gateway voi server:
+mkdir 5.18_ducnt
+sshfs -p 2395 -o idmap=user 5.18_ducnt/ ducnt@172.18.5.18:/storage/ducnt/
+
+copy file len gateway:
+scp -P 2395 /home/duc/Code/service/yolov3_keras_model.h5 ducnt@10.5.0.249:/home/ducnt/5.18_ducnt/weapon_service/Flask
+kiểm tra dung lượng: 
+du -h /home/ducnt
+du -ahd1 | sort -hr
+byobu
+ctrl+D tắt
+F6 chạy ngầm
+F2 tab mới
+F3,F4 dịch trái, phải
+
+htop
+watch -n1 nvidia-smi
+
+count file:
+find . -type f | wc -l
+
+move large files:
+find /path/to/old-directory -type f | xargs -i mv "{}" /path/to/new-directory
+move random files:
+ls | shuf -n 10 | xargs -i mv {} path-to-new-folder
+rename large files:	-exec thuc thi moi command		\; ket thuc exec
+find . -type f -exec rename 's/ /_/g' {} \;
+
+remove:
+rm -r -rf *.mp4
+
+copy:
+find . -maxdepth 1 -type f -print0 | head -z -n 1000 | xargs -0 -r -- cp -t "$destdir"
+
+kiem tra dung luong:
+du -hs
+df -h
+
+save command output to file:
+[command] > [/filelocation/filename]
+
+append command output to file:
+[command] >> [/filelocation/filename]

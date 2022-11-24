@@ -1,0 +1,6 @@
+pip install tensorflow
+pip install Keras
+conda install -c anaconda pandas
+conda install -c anaconda cudatoolkit=10.1
+conda install -c anaconda cudnn
+
