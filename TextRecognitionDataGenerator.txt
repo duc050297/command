@@ -10,3 +10,4 @@ trdg -w 1 -c 1000 -k 10 -b 2 -rk -i ../test.txt -fd ../font -d 3 --output_dir te
 -d: biến dạng
 -t: số luồng
 --output_dir: folder output
+
