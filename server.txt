@@ -2,7 +2,7 @@ ps -ef|grep ducnt
 kill all: ps aux | grep ducnt | awk '{print $2}' | xargs kill -9 
 
 Chạy ngầm và ghi log vào nohup.out
-nohup python app.py > data/log.txt &
+nohup python -u app.py > data/log.txt &
 
 Xem log
 tail -fn -500 log.txt
