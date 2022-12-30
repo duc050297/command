@@ -1,5 +1,6 @@
 docker ps
 docker stop [CONTAINER_ID]
+docker run -it --gpus all [IMAGE_NAME] -p [PORT|DOCKER_PORT]
 dokcer exec -it [CONTAINER_ID] bash
 
 docker images -a
