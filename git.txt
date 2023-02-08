@@ -1,0 +1,6 @@
+git add .
+git commit -m ""
+git push origin master
+
+git tag -a v1.2.0 -m "v1.2.0"
+git push origin v1.2.0
