@@ -2,11 +2,18 @@ git add .
 git commit -m ""
 git push origin master
 
-git tag -a v1.2.0 -m "v1.2.0"
-git push origin v1.2.0
-
 # conflict
 git stash
 git pull origin master
 git stash pop
 git status
+
+# tag
+git tag -a v1.2.0 -m "v1.2.0"
+git push origin v1.2.0
+
+# update tag
+git tag
+git tag -d v1.2.0
+git push --delete origin v1.2.0
+git push origin v1.2.0
