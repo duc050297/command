@@ -1,0 +1,18 @@
+# start service
+systemctl start mysql.service
+systemctl status mysql.service
+
+# open mysql promt
+mysql -u root -p
+
+# create/update user password
+CREATE USER 'sammy'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+ALTER USER 'sammy'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+
+# granting privileges
+GRANT PRIVILEGE ON database.table TO 'username'@'host';
+GRANT CREATE, ALTER, DROP, INSERT, UPDATE, INDEX, DELETE, SELECT, REFERENCES, RELOAD on *.* TO 'sammy'@'localhost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* TO 'sammy'@'localhost' WITH GRANT OPTION;
+
+# free cache
+FLUSH PRIVILEGES;
