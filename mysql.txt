@@ -11,8 +11,14 @@ ALTER USER 'sammy'@'localhost' IDENTIFIED WITH mysql_native_password BY 'passwor
 
 # granting privileges
 GRANT PRIVILEGE ON database.table TO 'username'@'host';
-GRANT CREATE, ALTER, DROP, INSERT, UPDATE, INDEX, DELETE, SELECT, REFERENCES, RELOAD on *.* TO 'sammy'@'localhost' WITH GRANT OPTION;
+GRANT CREATE, ALTER, DROP, INSERT, UPDATE, INDEX, DELETE, SELECT, REFERENCES, RELOAD, LOCK on *.* TO 'sammy'@'localhost' WITH GRANT OPTION;
 GRANT ALL PRIVILEGES ON *.* TO 'sammy'@'localhost' WITH GRANT OPTION;
 
 # free cache
 FLUSH PRIVILEGES;
+
+# export database
+mysqldump --single-transaction -u username -p database > exporteddb.sql --no-tablespaces
+
+# import database
+mysql -u username -p database < exporteddb.sql
