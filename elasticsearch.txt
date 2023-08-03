@@ -1,0 +1,3 @@
+# start service
+sudo systemctl start elasticsearch.service
+sudo systemctl status elasticsearch.service
