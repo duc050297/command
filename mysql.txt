@@ -2,7 +2,7 @@
 systemctl start mysql.service
 systemctl status mysql.service
 
-# open mysql promt
+# open mysql prompt
 mysql -u root -p
 
 # open mycli promt
