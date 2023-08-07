@@ -1,4 +1,4 @@
-docker ps
+docker ps -a
 docker stop [CONTAINER_ID]
 dokcer exec -it [CONTAINER_ID] bash
 docker images -a
@@ -13,3 +13,10 @@ docker image build -t resume-parsing:v1.6.3 -t resume-parsing:latest .
 # run
 docker run -it --gpus all [IMAGE_NAME] -p [PORT|DOCKER_PORT]
 docker run --gpus all -it -p 9715:9715 resume-parsing:v1.6.3
+
+# start container
+docker start [CONTAINER_NAME/CONTAINER_ID]
+
+# show container logs
+docker logs [OPTIONS] CONTAINER
+docker logs -f --since=2m kb-container
