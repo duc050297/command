@@ -4,3 +4,19 @@ sudo systemctl status elasticsearch.service
 
 # open es prompt
 
+
+
+
+# Docker
+## Install elasticsearch
+docker network create es-net --driver=bridge
+docker run -d --name es-container -m 4GB --net es-net -p 9200:9200 -e xpack.security.enabled=false -e discovery.type=single-node docker.elastic.co/elasticsearch/elasticsearch:8.9.0
+You can check if the server is up and running by browsing http://localhost:9200
+
+## Install kibana
+docker run -d \
+--name kb-container \
+--net es-net \
+-p 5601:5601 \
+-e ELASTICSEARCH_HOSTS=http://es-container:9200 \
+docker.elastic.co/kibana/kibana:8.9.0
