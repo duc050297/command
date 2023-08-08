@@ -1,22 +1,33 @@
 docker ps -a
-docker stop [CONTAINER_ID]
-dokcer exec -it [CONTAINER_ID] bash
+docker stop CONTAINER_ID
+dokcer exec -it CONTAINER_ID bash
 docker images -a
 
 # remove image
-docker image rm -f [IMAGE_ID]
+docker image rm -f IMAGE_ID
 
 # build image
 DOCKER_BUILDKIT=1 docker build -t heartexlabs/label-studio:1.0.1 .
 docker image build -t resume-parsing:v1.6.3 -t resume-parsing:latest .
 
 # run
-docker run -it --gpus all [IMAGE_NAME] -p [PORT|DOCKER_PORT]
+docker run -it --gpus all IMAGE_NAME -p PORT|DOCKER_PORT
 docker run --gpus all -it -p 9715:9715 resume-parsing:v1.6.3
 
 # start container
-docker start [CONTAINER_NAME/CONTAINER_ID]
+docker start CONTAINER_NAME/CONTAINER_ID
+docker stop CONTAINER_NAME/CONTAINER_ID
+docker remove CONTAINER_NAME/CONTAINER_ID
 
 # show container logs
 docker logs [OPTIONS] CONTAINER
 docker logs -f --since=2m kb-container
+
+# volume
+docker volume ls
+docker volume rm VOLUME_NAME
+
+
+# docker compose
+docker compose up -d
+docker compose down
