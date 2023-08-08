@@ -26,6 +26,7 @@ docker logs -f --since=2m kb-container
 # volume
 docker volume ls
 docker volume rm VOLUME_NAME
+docker inspect VOLUME_NAME
 
 
 # docker compose
