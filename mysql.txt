@@ -32,3 +32,5 @@ mysql -u username -p database < exporteddb.sql
 SHOW VARIABLES LIKE 'validate_password%';
 # update password policy
 SET GLOBAL validate_password.special_char_count = 0;
+# show
+SHOW GRANTS;
