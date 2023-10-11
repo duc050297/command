@@ -35,3 +35,8 @@ docker compose down
 
 # cleans unused containers
 docker system prune
+
+# docker hub
+docker login
+docker tag local-image:tagname new-repo:tagname
+docker push new-repo:tagname
