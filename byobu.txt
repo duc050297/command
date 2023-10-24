@@ -2,7 +2,9 @@ Byobu Commands
 ==============
 
         byobu                              Screen manager
-
+        byobu ls                           List all session
+        byobu kill-session -t <session_name>        Kill a single session
+        byobu rename -t <session_name> <session_new_name>        Rename session
 
 Level 0 Commands (Quick Start)
 ------------------------------
