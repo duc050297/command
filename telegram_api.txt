@@ -1,0 +1,5 @@
+# get chat id
+https://api.telegram.org/bot<YourBOTToken>/getUpdates
+
+# send message
+https://api.telegram.org/bot<YourBOTToken>/sendMessage?chat_id=<MYCHATID>&text=SMS+from+{{sender}}:+{text}}
