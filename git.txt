@@ -10,7 +10,7 @@ git status
 
 # rollback
 IF you commit and have NOT pushed your changes to remote:
-git reset HEAD~1
+git reset HEAD~1 or git reset --hard origin/master
 ELSE you have pushed your changes to remote:
 git revert HEAD
 
