@@ -1,6 +1,7 @@
 // select with limit offset
-SELECT * FROM tbl_users ORDER BY id LIMIT 10 OFFSET 1000003;  // slow with big offset
+SELECT * FROM tbl_users ORDER BY created_at LIMIT 10 OFFSET 1000003;  // slow with big offset
 
+// 10x faster 
 SELECT * FROM tbl_users INNER JOIN (SELECT id
                             FROM tbl_users
                             ORDER BY created_at
