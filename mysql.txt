@@ -21,7 +21,9 @@ GRANT ALL PRIVILEGES ON *.* TO 'sammy'@'localhost' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 
 # export database
-mysqldump --single-transaction -u username -p database > exporteddb.sql --no-tablespaces
+mysqldump --single-transaction -u username -p dbname > exporteddb.sql --no-tablespaces
+# export schema
+mysqldump -h 127.0.0.1 -u root -p --no-data dbname > schema.sql
 
 # import database
 mysql -u username -p database < exporteddb.sql
