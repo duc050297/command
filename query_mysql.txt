@@ -6,3 +6,6 @@ SELECT * FROM tbl_users INNER JOIN (SELECT id
                             FROM tbl_users
                             ORDER BY created_at
                             LIMIT 10 OFFSET 1000003) AS tmp USING (id);
+
+// subquery
+select count(zone_id) from (select zone_id, count(time) as c_time from daily_inventory_history group by zone_id) as c_table where c_time < 30
