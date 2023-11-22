@@ -1,0 +1,8 @@
+# check version
+java -version
+
+# list java version
+update-java-alternatives --list
+
+# change version
+sudo update-alternatives --config java
