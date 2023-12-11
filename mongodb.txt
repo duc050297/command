@@ -1,0 +1,11 @@
+show dbs
+use [DBName]
+
+# create compound index
+db.<collection>.createIndex( {
+   <field1>: <sortOrder>,
+   <field2>: <sortOrder>,
+   ...
+   <fieldN>: <sortOrder>
+} )
+db.messages.createIndex({"conversationId": 1, "created_at": -1})
