@@ -12,7 +12,9 @@ db.players.insertMany([
 
 # search
 db.messages.find({conversationId: "65729a0770327cc67b53eaa5"})
-db.messages.find({conversationId: "65729a0770327cc67b53eaa5", $text:{ $search: 'test'}})   # full text search
+
+# full text search (https://www.mongodb.com/docs/manual/reference/operator/query/text/)
+db.messages.find({conversationId: "65729a0770327cc67b53eaa5", $text:{ $search: "ghi ban chan trai"}})   
 
 # create compound index
 db.<collection>.createIndex( {
