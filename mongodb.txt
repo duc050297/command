@@ -10,6 +10,10 @@ db.players.insertMany([
    {"name": "greenwood", "description": "ghi ban bang dau"}
 ])
 
+# search
+db.messages.find({conversationId: "65729a0770327cc67b53eaa5"})
+db.messages.find({conversationId: "65729a0770327cc67b53eaa5", $text:{ $search: 'test'}})   # full text search
+
 # create compound index
 db.<collection>.createIndex( {
    <field1>: <sortOrder>,
