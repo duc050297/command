@@ -13,6 +13,8 @@ db.players.insertMany([
 # search
 db.messages.find({conversationId: "65729a0770327cc67b53eaa5"})
 
+# create index for full text search
+db.messages.createIndex({ "content": "text"});
 # full text search (https://www.mongodb.com/docs/manual/reference/operator/query/text/)
 db.messages.find({conversationId: "65729a0770327cc67b53eaa5", $text:{ $search: "ghi ban chan trai"}})   
 
