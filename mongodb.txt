@@ -1,6 +1,15 @@
 show dbs
 use [DBName]
 
+# insert many
+db.players.insertMany([
+   {"name": "cr7", "description": "ghi ban bang hai chan va bang dau"},
+   {"name": "m10", "description": "ghi ban chan trai va chan phai"},
+   {"name": "Haaland", "description": "ghi ban chan trai"},
+   {"name": "M3p", "description": "ghi ban chan phai"},
+   {"name": "greenwood", "description": "ghi ban bang dau"}
+])
+
 # create compound index
 db.<collection>.createIndex( {
    <field1>: <sortOrder>,
