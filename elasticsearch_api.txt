@@ -8,6 +8,7 @@ GET test-index-000001
 GET /_cat/health?v
 GET /_cat/nodes?v
 GET /_cat/indices?v
+GET /_cat/shards?v
 
 # add doc to index
 PUT /test-index-000001/_doc/2
