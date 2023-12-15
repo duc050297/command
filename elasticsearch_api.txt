@@ -28,4 +28,13 @@ DELETE /test-index-000001/_doc/2
 
 # get index info
 GET /test-index-000001/_doc/rLlvZowBdOxg2XsU17Cv
+
+# search
 GET /test-index-000001/_search
+{
+  "query": {
+    "match": {
+      "content": "message"
+    }
+  }
+}
