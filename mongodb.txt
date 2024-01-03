@@ -29,3 +29,8 @@ db.messages.createIndex({"conversationId": 1, "created_at": -1})
 
 # update
 db.conversations.updateOne({ _id: ObjectId('657299e6df77f6388577c800') }, {$set: {members: 'new_value'}})
+
+
+# terminal
+mongodump --host localhost --port 27017 --authenticationDatabase admin -u ducnt -p Duc050297 --db template-database --collection conversations -o <backup-folder>
+docker exec -it mongo-container sh -c 'mongodump --host localhost --port 27017 --authenticationDatabase admin -u ducnt -p Duc050297 --db template-database --collection conversations --gzip --archive' > dump.gz
