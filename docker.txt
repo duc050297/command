@@ -19,6 +19,9 @@ docker start CONTAINER_NAME/CONTAINER_ID
 docker stop CONTAINER_NAME/CONTAINER_ID
 docker remove CONTAINER_NAME/CONTAINER_ID
 
+# copy folder from container
+docker cp mongo-container:/backup ./
+
 # show container logs
 docker logs [OPTIONS] CONTAINER
 docker logs -f --since=2m kb-container
