@@ -1,5 +1,12 @@
+# Access MongoDB From Your Shell
+mongosh "mongodb://ducnt:Duc050297@localhost:27017/?authMechanism=DEFAULT&authSource=admin"
+
+# show database
 show dbs
 use [DBName]
+
+# create collection
+db.createCollection(name, options)
 
 # insert many
 db.players.insertMany([
@@ -29,7 +36,6 @@ db.messages.createIndex({"conversationId": 1, "created_at": -1})
 
 # update
 db.conversations.updateOne({ _id: ObjectId('657299e6df77f6388577c800') }, {$set: {members: 'new_value'}})
-
 
 # terminal
 mongodump --host localhost --port 27017 --authenticationDatabase admin -u ducnt -p Duc050297 --db template-database --collection conversations -o <backup-folder>
