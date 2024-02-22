@@ -1,6 +1,11 @@
 # Access MongoDB From Your Shell
 mongosh "mongodb://ducnt:Duc050297@localhost:27017/?authMechanism=DEFAULT&authSource=admin"
 
+# connect to mongodb using machine ip
+sudo vim /etc/mongod.conf
+change service config: bind_ip = 0.0.0.0
+mongosh --host 192.168.30.169
+
 # show database
 show dbs
 use [DBName]
