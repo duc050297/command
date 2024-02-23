@@ -1,0 +1,29 @@
+sudo systemctl start postgresql
+
+# Access postgres promt
+sudo -i -u postgres
+psql
+or 
+sudo -u postgres psql
+
+# create database
+sudo -u postgres createdb ducnt-db
+
+psql -d ducnt-db
+
+# check current connection
+\conninfo
+
+# show databases
+SELECT datname FROM pg_catalog.pg_database;
+
+# create database
+create database test;
+create database "test-db";
+
+# drop database
+drop database test;
+
+# switch database
+\connect "test-db"
+\c "test-db"
