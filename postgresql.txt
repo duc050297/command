@@ -14,6 +14,12 @@ psql -d ducnt-db
 # check current connection
 \conninfo
 
+# list roles
+\du 
+
+# create new user
+create user ducnt with superuser password 'admin';
+
 # show databases
 SELECT datname FROM pg_catalog.pg_database;
 
@@ -27,3 +33,29 @@ drop database test;
 # switch database
 \connect "test-db"
 \c "test-db"
+
+# list table
+\dt
+
+# create table
+CREATE TABLE accounts (
+  user_id SERIAL PRIMARY KEY, 
+  username VARCHAR (50) UNIQUE NOT NULL, 
+  password VARCHAR (50) NOT NULL, 
+  email VARCHAR (255) UNIQUE NOT NULL, 
+  created_at TIMESTAMP NOT NULL, 
+  last_login TIMESTAMP
+);
+
+# insert
+INSERT INTO accounts (username, password, email, created_at)
+VALUES ('Ford', 'Mustang', 1964, now());
+
+# set default value
+alter table accounts alter created_at set default now();
+
+# table info
+\d accounts
+
+
+
