@@ -5,6 +5,8 @@ sudo -i -u postgres
 psql
 or 
 sudo -u postgres psql
+or
+psql "postgresql://ducnt:admin@localhost:5432/ducnt-db"
 
 # create database
 sudo -u postgres createdb ducnt-db
