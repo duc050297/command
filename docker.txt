@@ -11,7 +11,7 @@ DOCKER_BUILDKIT=1 docker build -t heartexlabs/label-studio:1.0.1 .
 docker image build -t resume-parsing:v1.6.3 -t resume-parsing:latest .
 
 # run
-docker run -it --gpus all IMAGE_NAME -p PORT|DOCKER_PORT
+docker run -it --gpus all -p PORT:DOCKER_PORT --name CONTAINER_NAME IMAGE_NAME
 docker run --gpus all -it -p 9715:9715 resume-parsing:v1.6.3
 
 # start container
