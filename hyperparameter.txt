@@ -1,4 +1,0 @@
-optimizer		lr		call back
-adam			1e-4		lrs
-nadam			1e-3		lrs
-sgd			1e-2		clr
