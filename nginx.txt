@@ -1,5 +1,5 @@
 # docs
-https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04
+https://ubuntu.com/tutorials/install-and-configure-nginx#1-overview
 
 # Managing the Nginx Process
 sudo systemctl stop nginx
@@ -12,3 +12,22 @@ sudo systemctl enable nginx
 # config 
 sudo nano /etc/nginx/sites-available/my_domain
 sudo ln -s /etc/nginx/sites-available/your_domain /etc/nginx/sites-enabled/
+
+
+cd /etc/nginx/sites-enabled
+sudo vim tutorial
+# /etc/nginx/sites-enabled/tutorial
+server {
+       listen 81;
+       listen [::]:81;
+
+       server_name example.ubuntu.com;
+
+       root /var/www/tutorial;
+       index index.html;
+
+       location / {
+               try_files $uri $uri/ =404;
+       }
+}
+sudo service nginx restart
