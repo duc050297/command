@@ -54,3 +54,6 @@ save command output to file:
 
 append command output to file:
 [command] >> [/filelocation/filename]
+
+check open port:
+sudo lsof -nP | grep LISTEN
