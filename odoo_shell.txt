@@ -1,0 +1,10 @@
+odoo shell -c library.conf
+
+self.env['res.partner'].search([('name', 'like', 'Lumber')])
+
+Grouping by fields and aggregate data
+self.env["res.partner"].read_group([("name", "like", "Azure")], fields=["state_id:count_distinct",], groupby=["country_id"], lazy=False)
+
+# transaction
+self.env.cr.execute("SELECT id, login FROM res_users WHERE login=%(login)s OR id=%(id)s", {"login": "demo", "id": 1})
+self.env.cr.fetchall() or self.env.cr.dictfetchall()
