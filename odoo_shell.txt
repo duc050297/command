@@ -1,6 +1,8 @@
 odoo shell -c library.conf
 
 self.env['res.partner'].search([('name', 'like', 'Lumber')])
+self.env["project.task"].search_read([('name', 'like', 'Kiểm tra')])
+self.env["project.task"].browse([37]).read()
 
 Grouping by fields and aggregate data
 self.env["res.partner"].read_group([("name", "like", "Azure")], fields=["state_id:count_distinct",], groupby=["country_id"], lazy=False)
