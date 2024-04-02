@@ -59,5 +59,8 @@ alter table accounts alter created_at set default now();
 # table info
 \d accounts
 
+# import dump data
+psql --username=ducnt pm-demo < dump.sql
+
 
 
