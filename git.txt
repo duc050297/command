@@ -23,3 +23,6 @@ git tag
 git tag -d v1.2.0
 git push --delete origin v1.2.0
 git push origin v1.2.0
+
+# set stream all branch
+git push --set-upstream origin --all
