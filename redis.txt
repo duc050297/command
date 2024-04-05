@@ -1,7 +1,10 @@
 redis-cli
 redis-cli -h redis15.localnet.org -p 6390
 
-get numRequest?userIP=10.240.2.131
-hget numRequest?userIP=10.240.2.131
-
 SET key value
+get numRequest?userIP=10.240.2.131
+
+# hash
+hset "hash_test" "color" "red"
+hget hash_test color
+HGETALL hash_test
