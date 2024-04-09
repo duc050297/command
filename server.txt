@@ -59,5 +59,6 @@ append command output to file:
 
 check open port:
 sudo lsof -nP | grep LISTEN
+sudo lsof -i -P -n | grep LISTEN
 
 ps ax | grep odoo
