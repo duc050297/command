@@ -21,7 +21,8 @@ GRANT ALL PRIVILEGES ON *.* TO 'sammy'@'localhost' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 
 # export database
-mysqldump --single-transaction -u username -p dbname > exporteddb.sql --no-tablespaces
+mysqldump --single-transaction -h 127.0.0.1 -u ducnt -p jwtAuth > exporteddb.sql --no-tablespaces
+mysqldump -u [uname] -p db_name | gzip > db_backup.sql.gz  # zip
 # export schema
 mysqldump -h 127.0.0.1 -u root -p --no-data dbname > schema.sql
 
