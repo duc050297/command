@@ -14,22 +14,16 @@ mount gateway voi server:
 mkdir 5.18_ducnt
 sshfs -p 2395 -o idmap=user 5.18_ducnt/ ducnt@172.18.5.18:/storage/ducnt/
 
-unmount:
-fusermount -u /temp/user/harddrive
+list mount: mount -l
+unmount: fusermount -u /temp/user/harddrive
 
 copy file len gateway:
 scp -P 2395 /home/duc/Code/service/yolov3_keras_model.h5 ducnt@10.5.0.249:/home/ducnt/5.18_ducnt/weapon_service/Flask
 kiểm tra dung lượng: 
 du -h /home/ducnt
 du -ahd1 | sort -hr
-byobu
-ctrl+D tắt
-F6 chạy ngầm
-F2 tab mới
-F3,F4 dịch trái, phải
 
-htop
-watch -n1 nvidia-smi
+htop: watch -n1 nvidia-smi
 
 count file:
 find . -type f | wc -l
