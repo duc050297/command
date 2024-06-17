@@ -26,3 +26,7 @@ git push origin v1.2.0
 
 # set stream all branch
 git push --set-upstream origin --all
+
+# delete remote branch
+git push -d <remote_name> <branchname>
+git branch -d <branchname>  # delete local branch
