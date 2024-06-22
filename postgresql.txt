@@ -49,9 +49,13 @@ CREATE TABLE accounts (
   last_login TIMESTAMP
 );
 
-# insert
+# insert record
 INSERT INTO accounts (username, password, email, created_at)
 VALUES ('Ford', 'Mustang', 1964, now());
+
+# delete record
+DELETE FROM table_name
+WHERE condition;
 
 # set default value
 alter table accounts alter created_at set default now();
