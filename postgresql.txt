@@ -52,6 +52,9 @@ CREATE TABLE accounts (
 # insert record
 INSERT INTO accounts (username, password, email, created_at)
 VALUES ('Ford', 'Mustang', 1964, now());
+!! Lưu ý: với primary key có AUTO_INCREMENT, không đc phép truyền id khi insert record (mặc tại thời điểm insert không xảy ra lỗi, 
+nhưng khi increment_value tăng lên có thể bị trùng với id đã tự thêm từ trước)
+
 
 # delete record
 DELETE FROM table_name
