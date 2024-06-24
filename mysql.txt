@@ -30,6 +30,7 @@ mysqldump -h 127.0.0.1 -u root -p --no-data dbname > schema.sql
 mysql -u username -p database < exporteddb.sql
 
 # explain analyze
+explain analyze SELECT * FROM jwtAuth.tbl_users limit 10 offset 999000;
 explain FORMAT=TREE SELECT * FROM jwtAuth.tbl_users limit 10 offset 999000;
 
 # show password policy
