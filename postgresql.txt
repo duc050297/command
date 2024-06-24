@@ -55,10 +55,12 @@ VALUES ('Ford', 'Mustang', 1964, now());
 !! Lưu ý: với primary key có AUTO_INCREMENT, không đc phép truyền id khi insert record (mặc tại thời điểm insert không xảy ra lỗi, 
 nhưng khi increment_value tăng lên có thể bị trùng với id đã tự thêm từ trước)
 
-
 # delete record
 DELETE FROM table_name
 WHERE condition;
+
+# explain analyze
+explain SELECT * FROM public.tbl_users LIMIT 10 offset 999000
 
 # set default value
 alter table accounts alter created_at set default now();
