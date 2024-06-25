@@ -1,0 +1,5 @@
+# set owner ship
+sudo chown -R ducnt:fe ducnt/
+
+# Make the current user own everything inside the folder
+sudo chown -R $USER ~/.blabla
