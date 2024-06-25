@@ -3,3 +3,18 @@ sudo chown -R ducnt:fe ducnt/
 
 # Make the current user own everything inside the folder
 sudo chown -R $USER ~/.blabla
+
+# list user and group
+tail /etc/group
+
+# create group
+sudo addgroup groupname
+
+# Add your user to the fe group.
+sudo adduser username groupname
+
+# change ownership
+sudo chown ducnt:fe fe/
+
+# change permission
+sudo chmod 774 fe
