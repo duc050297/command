@@ -1,4 +1,8 @@
 # installation
+sudo apt update
+sudo apt install nodejs
+node -v
+
 The module n makes version-management easy: sudo npm install n -g
 For the latest stable version: sudo n stable
 For the latest version: n latest
