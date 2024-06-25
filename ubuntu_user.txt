@@ -14,7 +14,7 @@ sudo addgroup groupname
 sudo adduser username groupname
 
 # change ownership
-sudo chown ducnt:fe fe/
+sudo chown root:fe fe/
 
 # change permission
 sudo chmod 774 fe
