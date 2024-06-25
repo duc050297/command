@@ -1,3 +1,11 @@
+# install docker
+https://docs.docker.com/engine/install/ubuntu/#install-from-a-package
+# Create the docker group if it does not exist
+sudo groupadd docker
+# Add your user to the docker group.
+sudo usermod -aG docker $USER
+
+# command
 docker ps -a
 docker stop CONTAINER_ID
 docker exec -it CONTAINER_ID bash
