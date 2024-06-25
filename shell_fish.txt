@@ -10,3 +10,6 @@ sudo chsh --shell /usr/bin/fish ducnt
 # Entering Fish
 fish
 
+# Creating a config file
+mkdir -p ~/.config/fish
+vim ~/.config/fish/config.fish
