@@ -1,6 +1,9 @@
 # setup
 sudo apt-get install fish
 
+# list available shell
+cat /etc/shells
+
 # check default shell
 grep ducnt /etc/passwd
 
