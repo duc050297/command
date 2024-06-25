@@ -1,0 +1,14 @@
+# installation
+The module n makes version-management easy: npm install n -g
+For the latest stable version: n stable
+For the latest version: n latest
+
+or
+
+sudo su -c 'curl -sL https://deb.nodesource.com/setup_20.x | bash -'
+sudo apt-get install nodejs -y
+sudo apt update
+sudo apt upgrade
+sudo npm install -g npm@10.4.0
+node --version
+npm --version
