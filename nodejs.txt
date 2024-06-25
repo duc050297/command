@@ -1,6 +1,6 @@
 # installation
-The module n makes version-management easy: npm install n -g
-For the latest stable version: n stable
+The module n makes version-management easy: sudo npm install n -g
+For the latest stable version: sudo n stable
 For the latest version: n latest
 
 or
