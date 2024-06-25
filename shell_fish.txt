@@ -1,0 +1,12 @@
+# setup
+sudo apt-get install fish
+
+# check default shell
+grep ducnt /etc/passwd
+
+# set default shell
+sudo chsh --shell /usr/bin/fish ducnt
+
+# Entering Fish
+fish
+
