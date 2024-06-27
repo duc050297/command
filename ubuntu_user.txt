@@ -14,7 +14,7 @@ sudo addgroup groupname
 sudo adduser username groupname
 
 # change ownership
-sudo chown root:fe fe/
-
+sudo chown -R root:fe fe/
+sudo chown -R root:fe .git
 # change permission
 sudo chmod 774 fe
