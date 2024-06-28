@@ -17,3 +17,8 @@ sudo apt upgrade
 sudo npm install -g npm@10.4.0
 node --version
 npm --version
+
+# nvm
+nvm list
+nvm use system
+nvm install v20
