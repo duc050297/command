@@ -11,8 +11,13 @@ git status
 # rollback
 IF you commit and have NOT pushed your changes to remote:
 git reset HEAD~1 or git reset --hard origin/master
+git reset [id] --hard
+git push --force
 ELSE you have pushed your changes to remote:
-git revert HEAD
+git revert [id]
+
+git reset sẽ quay lại commit cũ và xóa các commit sau đó
+git revert sẽ tạo ra commit mới giống commit muốn rollback
 
 # tag
 git tag -a v1.2.0 -m "v1.2.0"
