@@ -2,6 +2,12 @@ git add .
 git commit -m ""
 git push origin master
 
+# Luôn luôn thử sử dụng rebase thay vì pull thường
+git pull --rebase
+# Nếu conflict thì undo bằng lệnh
+git rebase --abort
+# Sau đó pull và merge conflict bình thường (hoặc sử dụng interactive rebase)
+
 # conflict
 git stash
 git pull origin master
