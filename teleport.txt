@@ -1,0 +1,11 @@
+# login teleport
+tsh login --proxy=gw.vcadm.vn --user=ducnt
+
+# export config
+tsh config >> ~/.ssh/config
+
+# list server
+tsh ls
+
+# ssh
+tsh ssh <user>@<node name>
