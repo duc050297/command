@@ -85,3 +85,19 @@ server {
     gzip_min_length 256;
 }
 
+# load balancing
+thêm vào file: /etc/nginx/nginx.conf
+
+stream {
+    upstream pod53{
+        server 10.5.94.102:10148;
+    }
+    map $server_addr $x {
+        10.5.94.102 pod53;
+    }
+    server {
+        listen 4006;
+        proxy_pass $x;
+    }
+}
+
