@@ -9,6 +9,9 @@ sudo systemctl reload nginx
 sudo systemctl disable nginx
 sudo systemctl enable nginx
 
+# copy source code
+sudo cp -r dist/template-quickstart-angular/browser/ /var/www/angular-app
+
 # config 
 sudo nano /etc/nginx/sites-available/my_domain
 sudo ln -s /etc/nginx/sites-available/your_domain /etc/nginx/sites-enabled/
