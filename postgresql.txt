@@ -71,5 +71,14 @@ alter table accounts alter created_at set default now();
 # import dump data
 psql --username=ducnt pm-demo < dump.sql
 
+# pg-notify
+LISTEN my_channel;
+NOTIFY my_channel, 'Hello, world!';
 
+# query in jsonb
+select * from tbl_users_log
+WHERE new_row_data @> '{"role": "member"}';
+
+select * from tbl_users_log
+WHERE new_row_data->>'role' = 'admin';
 
