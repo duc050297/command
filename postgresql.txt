@@ -82,3 +82,5 @@ WHERE new_row_data @> '{"role": "member"}';
 select * from tbl_users_log
 WHERE new_row_data->>'role' = 'admin';
 
+# show replication slots
+SELECT * FROM pg_replication_slots;
