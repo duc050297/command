@@ -16,6 +16,11 @@ sudo cp -r dist/template-quickstart-angular/browser/ /var/www/angular-app
 sudo nano /etc/nginx/sites-available/my_domain
 sudo ln -s /etc/nginx/sites-available/your_domain /etc/nginx/sites-enabled/
 
+# show log
+tail -f /var/log/nginx/access.log
+tail -f /var/log/nginx/error.log
+tail -f /var/log/nginx/*.log       # show error + access
+
 # restart service after making change
 sudo systemctl restart nginx
 
