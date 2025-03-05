@@ -13,8 +13,8 @@ sudo systemctl enable nginx
 sudo cp -r dist/template-quickstart-angular/browser/ /var/www/angular-app
 
 # config 
-sudo nano /etc/nginx/sites-available/my_domain
-sudo ln -s /etc/nginx/sites-available/your_domain /etc/nginx/sites-enabled/
+sudo vim /etc/nginx/sites-available/default
+sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
 
 # show log
 tail -f /var/log/nginx/access.log
