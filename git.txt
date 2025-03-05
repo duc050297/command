@@ -8,6 +8,11 @@ git pull --rebase
 git rebase --abort
 # Sau đó pull và merge conflict bình thường (hoặc sử dụng interactive rebase)
 
+# remote
+git remote -v
+git remote remove origin
+git remote add origin git@p.zamba.vn:ngannv/nodejs.crm.bizfly.vn.git  
+
 # conflict
 git stash
 git pull origin master
