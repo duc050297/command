@@ -46,3 +46,7 @@ git push --set-upstream origin --all
 # delete remote branch
 git push -d <remote_name> <branchname>
 git branch -d <branchname>  # delete local branch
+
+# config
+git config core.fileMode false  # ignore permission change and only track content modifications
+
