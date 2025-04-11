@@ -56,3 +56,8 @@ sudo lsof -nP | grep LISTEN
 sudo lsof -i -P -n | grep LISTEN
 
 ps ax | grep odoo
+
+# add and remove apt repository
+sudo add-apt-repository ppa:ubuntu-vn/ppa
+sudo add-apt-repository --remove ppa:ubuntu-vn/ppa
+sudo apt-get update
